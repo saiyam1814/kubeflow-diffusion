@@ -8,7 +8,7 @@ metadata:
 spec:
   predictor:
     containers:
-      - image: docker.io/saiyam911/navigateml:v2
+      - image: saiyam911/navigateaustin:v1
         imagePullPolicy: Always
         resources:
           limits:

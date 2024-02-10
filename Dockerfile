@@ -14,9 +14,6 @@ RUN apt-get update && \
 # Now copy the rest of your app's code
 COPY app.py .
 
-# Consider where and how you'll be using this model file in your app
-RUN wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt -O model.ckpt
-
 EXPOSE 8080
 
 CMD ["python", "./app.py"]

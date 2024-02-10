@@ -8,7 +8,7 @@ from io import BytesIO
 
 app = Flask(__name__)
 
-model_id = "model.ckpt"
+model_id = "runwayml/stable-diffusion-v1-5"
 
 pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float32, low_cpu_mem_usage=True)
 

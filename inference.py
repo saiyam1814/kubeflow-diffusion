@@ -9,11 +9,7 @@ response = requests.post(
     json={"prompt": ""},
 )
 
-if response.status_code == 200:
-    data = response.json()
-    img_data = base64.b64decode(data["image"])
-    img = Image.open(BytesIO(img_data))
-    display(img)
-else:
-    print(f"Error: {response.status_code}")
-
+data = response.json()
+img_data = base64.b64decode(data["image"])
+img = Image.open(BytesIO(img_data))
+display(img)
